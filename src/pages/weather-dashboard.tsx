@@ -4,6 +4,7 @@ import { AlertTriangle, MapPin, RefreshCw } from 'lucide-react'
 import { useGeolocation } from '@/hooks/use-geolocation'
 import WeatherSkeleton from '@/components/loading-skeleton'
 import CurrentWeather from '@/components/current-weather'
+import WeatherDetails from '@/components/weather-details'
 import { AlertCircle } from "lucide-react"
 import {
   Alert,
@@ -12,6 +13,7 @@ import {
 } from "@/components/ui/alert"
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from '@/hooks/use-weather'
 import HourlyTemp from '@/components/hourly-temp'
+import WeatherForecast from '@/components/weather-forecast'
 
 const WeatherDashboard = () => {
   const {coordinates,error : locationError,getLocation, isLoading : locationLoading} = useGeolocation();
@@ -101,8 +103,9 @@ const WeatherDashboard = () => {
 
          </div>
 
-         <div>
-           
+         <div className='grid gap-6 md:grid-cols-2 items-start'>
+           <WeatherDetails data={weatherQuery.data} />
+           <WeatherForecast data={forecastQuery.data} />
          </div>
      </div>
     </div>
