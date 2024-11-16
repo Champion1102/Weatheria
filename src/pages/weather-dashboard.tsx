@@ -14,6 +14,7 @@ import {
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from '@/hooks/use-weather'
 import HourlyTemp from '@/components/hourly-temp'
 import WeatherForecast from '@/components/weather-forecast'
+import { FavoriteCities } from '@/components/favourite-cities'
 
 const WeatherDashboard = () => {
   const {coordinates,error : locationError,getLocation, isLoading : locationLoading} = useGeolocation();
@@ -84,6 +85,7 @@ const WeatherDashboard = () => {
 
   return (
     <div className='space-y-4'>
+      <FavoriteCities />
     <div className='flex items-center justify-between'>
         <h1 className='text-xl font-bold tracking-tight'>My Location</h1>
         <Button

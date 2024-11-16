@@ -18,7 +18,7 @@ import { Button } from "@/components/ui/button";
 import { useFavorites } from "@/hooks/use-favourite";
 
 
-export function CitySearch() {
+export default function CitySearch() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
