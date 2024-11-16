@@ -2,7 +2,6 @@ import { ForecastData } from '@/api/types'
 import { Card,CardHeader,CardTitle,CardContent, } from './ui/card'
 import {ResponsiveContainer,LineChart,Line, XAxis, YAxis, Tooltip} from 'recharts'
 import {format} from 'date-fns';
-import React from 'react' 
 
 interface HourlyTempProps{
    data: ForecastData
