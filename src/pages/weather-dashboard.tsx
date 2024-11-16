@@ -5,7 +5,7 @@ import { useGeolocation } from '@/hooks/use-geolocation'
 import WeatherSkeleton from '@/components/loading-skeleton'
 import CurrentWeather from '@/components/current-weather'
 import WeatherDetails from '@/components/weather-details'
-import { AlertCircle } from "lucide-react"
+
 import {
   Alert,
   AlertDescription,
