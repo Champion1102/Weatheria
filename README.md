@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Weatheria 🌦️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Weatheria is a feature-rich web application that provides real-time weather details, a 5-day forecast, and advanced city search functionalities. Built with TypeScript and Vite-React, it offers a modern and efficient user experience.
 
-Currently, two official plugins are available:
+## Features 🚀
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Weather Details**: View current weather conditions for any city.
+- **5-Day Forecast**: Plan ahead with a 5-day weather forecast.
+- **City Search**: Search for weather details of any city with suggestions.
+- **Favorites**: Save your favorite cities for quick access.
+- **Recent History**: Track your recently searched cities.
+- **Weather Charts**: Visualize weather trends with charts using Recharts.
+- **Dark/Light Mode**: Toggle between dark and light themes.
+- **Your Location**: Automatically fetch weather details for your current location.
 
-## Expanding the ESLint configuration
+## Tech Stack 🛠️
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: TypeScript, Vite-React
+- **State Management**: TanStack Query (React Query)
+- **UI Components**: ShadCN UI
+- **Charts**: Recharts
+- **API**: OpenWeather API
 
-- Configure the top-level `parserOptions` property like this:
+## Installation 🛠️
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repository:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```bash
+   git clone https://github.com/your-username/weatheria.git
+   cd weatheria
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Install dependencies:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+  ```bash
+   npm install
+  ```
+
+3.Add your OpenWeather API key in a .env file:
+
+  ```env
+    VITE_OPENWEATHER_API_KEY=your_api_key_here
+  ```
+
+4.Run the development server:
+
+  ```bash
+   npm run dev
+  ```
+
+5.Open http://localhost:3000 in your browser.
+
+## Acknowledgements 🙏
+
+- [OpenWeather API](https://openweathermap.org/api)  
+- [TanStack Query](https://tanstack.com/query)  
+- [ShadCN UI](https://shadcn.dev/)  
+- [Vite](https://vitejs.dev/)  
+- [Recharts](https://recharts.org/)  
+
+---
+
+Made with ❤️ by [Ritesh](https://github.com/your-username)
