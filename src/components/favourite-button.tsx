@@ -36,7 +36,7 @@ export default function FavoriteButton({ data }: FavoriteButtonProps) {
       className={isCurrentlyFavorite ? "bg-yellow-500 hover:bg-yellow-600" : ""}
     >
       <Star
-        className={`h-4 w-4 ${isCurrentlyFavorite ? "fill-current" : ""}`}
+        className={`h-7 w-6 ${isCurrentlyFavorite ? "fill-current" : ""}`}
       />
     </Button>
   );
